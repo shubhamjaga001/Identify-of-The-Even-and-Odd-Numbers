@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="number"] {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #333;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Identify of The Even and Odd Numbers</h1>
+    <label>Enter Your Choice Number</label><br>
+    <input type="number" id="write" oninput="return myFunction()"><br>
+    <p id="show"></p>
+    <script>
+        function myFunction(){
+            let enter = document.getElementById("write").value;
+            let result = enter % 2 == 0 ? " is an Even Number" : " is an Odd Number";
+            document.getElementById("show").innerHTML = enter + result;
+            return false;
+        }
+    </script>
+</div>
+
+</body>
+</html>
